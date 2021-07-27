@@ -11,7 +11,7 @@ Data for Canada map drawn heavily from https://tengl.net/blog/2020/1/7/drawing-c
 
 ![alt text](https://github.com/jzeyl/Data-visualizations/blob/main/housing%20prices/vis.png)
 
-## Housing prices across province
+## Rent prices across province
 
 [Link to Shiny app](https://jeff-zeyl.shinyapps.io/shiny_rent_app/?_ga=2.107511364.7932263.1627397886-968041279.1627397886)
 ![alt text](https://github.com/jzeyl/Data-visualizations/blob/main/shinyrentpic.PNG)
