@@ -1,0 +1,11 @@
+name: shiny_rent_app
+title:
+username:
+account: jeff-zeyl
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4429761
+bundleId: 4861211
+url: https://jeff-zeyl.shinyapps.io/shiny_rent_app/
+when: 1627409111.68743
+lastSyncTime: 1627409111.68743
