@@ -74,27 +74,6 @@ import seaborn as sns
 sns.set_style('whitegrid')
 #sns.color_palette("ch:s=.25,rot=-.25", as_cmap=True)
 #ax= sns.stripplot(x='month',y='mean_temp_C',data=TO_temp)
-ax= sns.boxplot(x='month',y='mean_temp_C',data=TO_temp, palette="blues")
-ax.set(xlabel='Month', ylabel='Mean Temperature ($^\circ$C)')
+ax= sns.boxplot(x='month',y='mean_temp_C',data=TO_temp)
+ax.set(xlabel='Month', ylabel='Mean Temperature ($^\circ$C)',title = 'Mean Temperature by month in Toronto,CA (1929-2010), \n Pulled from Bigquery Public Datasets: GSOD')
 plt.show()
-
-
-Toronto = TO_temp[TO_temp["wban_number"]== 4724]
-Winnipeg = TO_temp[TO_temp["wban_number"]== 14996]
-Vancouver = TO_temp[TO_temp["wban_number"]== 24287]
-Fredericton = TO_temp[TO_temp["wban_number"]== 14648]
-
-titanic[titanic["Age"] > 35]
-
-f, axs = plt.subplots(1,2,
-                      figsize=(9,5),
-                      sharey=True)
-ax= sns.boxplot(x='month',y='mean_temp_C',data=Toronto, ax=axs[0])
-ax= sns.boxplot(x='month',y='mean_temp_C',data=Winnipeg, ax=axs[1])
-#ax= sns.boxplot(x='month',y='mean_temp_C',data=TO_temp, ax=axs[2])
-#ax= sns.boxplot(x='month',y='mean_temp_C',data=TO_temp, ax=axs[3])
-f.tight_layout()
-plt.show()
-
-
-
