@@ -24,4 +24,7 @@ Data from Google Bigquery Public Dataset using SQL queries from Python
 Visualized in Seaborn package
 ![alt_text](https://github.com/jzeyl/Data-visualizations/blob/main/weather%20bigquery/Figure_1.png)
 
+## 5. 3D data visualization using 'rgl' package in R
+![alt_text](https://github.com/jzeyl/Data-visualizations/blob/main/rgl%20cube%20dec%2021.PNG)
+
 
