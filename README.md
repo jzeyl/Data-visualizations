@@ -25,7 +25,7 @@ Visualized in Seaborn package
 ![alt_text](https://github.com/jzeyl/Data-visualizations/blob/main/weather%20bigquery/Figure_1.png)
 
 ## 5. 3D data visualization using 'rgl' package in R
-![alt_text](https://github.com/jzeyl/Data-visualizations/blob/main/rgl%20cube%20dec%2021.PNG)
+<img src=https://github.com/jzeyl/Data-visualizations/blob/main/rgl%20cube%20dec%2021.PNG alt="drawing" width="300"/>
 
 ## 6. Revenue of largest tech companies, 2021
 ![alt text](https://github.com/jzeyl/Data-visualizations/blob/main/tech%20companies%20revenue/plot.png)
