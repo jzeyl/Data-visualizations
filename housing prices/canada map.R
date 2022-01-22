@@ -1,9 +1,3 @@
-install.packages("sf")
-install.packages("rgdal")
-install.packages("geojsonio")
-install.packages("spdplyr")
-install.packages("rmapshaper")
-
 library(geojsonio)
 library(rmapshaper)
 library(rgdal)
@@ -47,8 +41,6 @@ canada_cd <- st_read("C:/Users/jeffz/Desktop/data/canada_cd_sim.geojson", quiet 
 
 canada_cd
 
-canada_cd <- st_read("C:/Users/jeffz/Desktop/data/canada_cd_sim.geojson", quiet = TRUE) # 1
-
 crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
 
 # Define the maps' theme -- remove axes, ticks, borders, legends, etc.
@@ -87,3 +79,4 @@ map<-ggplot() +
   theme(panel.grid.major = element_line(color = "white"),
         legend.key = element_rect(color = "gray40", size = 0.1))
 map
+
