@@ -5,12 +5,12 @@ https://www.reddit.com/r/dataisbeautiful/comments/p0kyb8/percent_of_people_using
 ![alt text](https://github.com/jzeyl/Data-visualizations/blob/main/Internet%20use%202000-2017.gif)
 
 
-## 2. Rent prices across province
+## 2. Rent prices across province (Shiny app)
 
-[Link to Shiny app](https://jeff-zeyl.shinyapps.io/shiny_rent_app/?_ga=2.107511364.7932263.1627397886-968041279.1627397886)
+[Here is the app](https://jeff-zeyl.shinyapps.io/shiny_rent_app/?_ga=2.107511364.7932263.1627397886-968041279.1627397886)
 ![alt text](https://github.com/jzeyl/Data-visualizations/blob/main/shinyrentpic.PNG)
 
-## 3. Housing prices across province
+## 3. Housing prices and household income compared across three Canadian provinces (2018)
 https://www.reddit.com/r/dataisbeautiful/comments/odpjry/household_income_by_residential_property_value_by/  
 
 Data source: https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=4610005101
