@@ -1,7 +1,6 @@
 # Data-visualizations
 
 ## 1. Internet use across the globe 2000-2017
-https://www.reddit.com/r/dataisbeautiful/comments/p0kyb8/percent_of_people_using_internet_by_country/h87gvt0/?context=3
 ![alt text](https://github.com/jzeyl/Data-visualizations/blob/main/Internet%20use%202000-2017.gif)
 
 
