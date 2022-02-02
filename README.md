@@ -22,7 +22,7 @@ Visualized in R (R Studio). Code for Canada map drawn heavily from https://tengl
 ## 4. SQL query of weather data from BigQuery
 Data from Google Bigquery Public Dataset using SQL queries from Python
 Visualized in Seaborn package
-![alt_text](https://github.com/jzeyl/Data-visualizations/blob/main/weather%20bigquery/Feb 2 panel weather.png)
+![alt_text](https://github.com/jzeyl/Data-visualizations/blob/main/weather%20bigquery/Feb%202%20panel%20weather.png)
 
 ## 5. 3D data visualization using 'rgl' package in R
 <img src=https://github.com/jzeyl/Data-visualizations/blob/main/rgl%20cube%20dec%2021.PNG alt="drawing" width="300"/>
