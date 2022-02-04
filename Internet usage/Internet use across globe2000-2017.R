@@ -4,7 +4,8 @@ library("sf")
 
 library("rnaturalearth")
 library("rnaturalearthdata")
-
+library(tidyverse)
+library(extrafont)
 
 #create the world map
 world <- ne_countries(scale = "medium", returnclass = "sf")
@@ -51,7 +52,7 @@ world$name_long
 internet$X2<-gsub("Bolivia (Plurin. State of)","Bolivia",internet$X)
 internet$X2<-gsub("Cabo Verde","Cape Verde",internet$X2)
 internet$X2<-gsub("Congo","Republic of Congo",internet$X2)
-internet$X2<-gsub("Côte d�???TIvoire","C�te d'Ivoire",internet$X2)
+internet$X2<-gsub("CÃ´te dâ???TIvoire","Côte d'Ivoire",internet$X2)
 internet$X2<-gsub("Dem. Rep. of the Congo","Democratic Republic of the Congo",internet$X2)
 internet$X2<-gsub("Falkland Islands (Malvinas)","Falkland Islands",internet$X2)
 internet$X2<-gsub("Iran (Islamic Republic of)","Iran",internet$X2)
@@ -69,23 +70,25 @@ names(internet)[5]<-"Percent"
 splt_year<-split(internet,internet$Year)
   
 
+
 #missing values:
 addinternet$name_long[which(is.na(addinternet$Value))]
-
-
 #plot for different years
 runplot<-function(i){
-# LEFT JOIN
 addinternet <- left_join(world, splt_year[[i]], by = c('name_long' = 'X2'), copy = T)
-
+year<-as.character(splt_year[[i]]$Year[1])
+yeardf<-splt_year[[i]]
 a<-ggplot(data = addinternet)+
   geom_sf(aes(fill = Percent), col = "black")+
-  scale_fill_viridis_c(option = "plasma")+
-  
-  #xlab("Longitude") + ylab("Latitude") +
-  ggtitle(paste0("Percentage of citizens using internet in ", expression(splt_year[[i]]$Year)),
-          subtitle = "Source: https://data.un.org/default.aspx (under Communication-->Internet Usage)")
-
+  scale_fill_viridis_c(limits = c(0,100),option = "plasma")+
+  labs(title = 'PERCENTAGE OF CITIZENS USING INTERNET')+
+  xlab("")+
+  ylab("")+
+  theme(panel.grid.major = element_line(color = "white", linetype = "dashed", 
+                                      size = 0.5), panel.background = element_rect(fill = "white"),
+        plot.title = element_text(hjust = 0.5))+
+  annotate("text", x = c(-130), y = c(-50), label = year,
+           size = 10, col = "black", fontface = "bold")
 a
 }
 runplot(1)+
@@ -93,8 +96,11 @@ runplot(2)+
 runplot(3)+
 runplot(4)+
 runplot(5)+
-runplot(6)
+runplot(6)+
+runplot(7)
 
+
+subtitle = "Source: https://data.un.org/default.aspx (under Communication-->Internet Usage)")+
 expression('No. of'~italic(bacteria X)~'isolates with corresponding types')
 
 
@@ -108,11 +114,20 @@ ggsave(filename = paste0("internetyear_",x,".png"),runplot(x))
 library(magick)
 library(magrittr)
 
-list.files(path='C:/Users/jeffz/Documents/worldinternet animation/', pattern = '*.png', full.names = TRUE) %>% 
-  image_read() %>% # reads each path file
-  image_join() %>% # joins image
-  image_animate(fps=0.5) %>% # animates, can opt for number of loops
-  image_write("FileName.gif") # write to current dir
+## list file names and read in
+imgs <- list.files('C:/Users/jeffz/Documents/worldinternet animation/', full.names = TRUE)
+img_list <- lapply(imgs, image_read)
 
+## join the images together
+img_joined <- image_join(img_list)
 
+## animate at 0.5 frames per second
+img_animated <- image_animate(img_joined, fps = 0.5)
+
+## view animated image
+img_animated
+
+## save to disk
+image_write(image = img_animated,
+            path = "C:/Users/jeffz/Documents/worldinternet animation/internet.gif")
 
