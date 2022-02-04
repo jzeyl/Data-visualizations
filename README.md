@@ -1,7 +1,7 @@
 # Data-visualizations
 
 ## 1. Internet use across the globe 2000-2017
-![alt text](https://github.com/jzeyl/Data-visualizations/blob/main/Internet%20use%202000-2017.gif)
+![alt text](https://github.com/jzeyl/Data-visualizations/blob/main/internet.gif)
 
 
 ## 2. Rent prices across province (Shiny app)
