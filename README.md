@@ -28,3 +28,6 @@ Visualized in Seaborn package
 
 ## 6. Revenue of largest tech companies, 2021
 ![alt text](https://github.com/jzeyl/Data-visualizations/blob/main/tech%20companies%20revenue/tech%20revenues.png)
+
+## 7. Tallest buildings in the world
+Scraped from wikipedia using rvest package
