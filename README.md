@@ -32,3 +32,6 @@ Visualized in Seaborn package
 ## 7. Tallest buildings in the world
 Scraped from wikipedia using rvest package
 ![alt_text](https://github.com/jzeyl/Data-visualizations/blob/main/tallest_statues/tall_stat_zoom.png)
+
+##8. Zimbabwe labour report Q3, 2021
+![zim_econ_plot](https://github.com/jzeyl/Data-visualizations/blob/main/zimecon/zimecon.png)
