@@ -22,9 +22,8 @@
 # Dashboards
 
 * This shiny app lets the user select the province and the housing type, producing a chart of price versus year for each included city, highlighted on the map of Canada. Data from Stats Canada.
- [Here is the app](https://jeff-zeyl.shinyapps.io/shiny_rent_app/?_ga=2.107511364.7932263.1627397886-968041279.1627397886)
-
-<p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/shinyrent.PNG" width="30%", height = "30%" align = "middle"/> </p>
+ [Here is the app](https://jeff-zeyl.shinyapps.io/shiny_rent_app/?_ga=2.107511364.7932263.1627397886-968041279.1627397886)  
+  * <p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/shinyrent.PNG" width="30%", height = "30%" align = "middle"/> </p>
 
 * Tableau dashboards
   * https://public.tableau.com/app/profile/jeff.zeyl#!/
