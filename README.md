@@ -8,13 +8,21 @@
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/tech%20companies%20revenue/tech%20revenues.png" width="30%", height = "15%" align = "middle"/> 
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/tallest_statues/tall_stat_zoom.png" width="30%", height = "15%" align = "middle"/> 
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/zimecon/zimecon.png" width="30%", height = "15%" align = "middle"/> 
-  
+
 </p>
 
+1. Internet use across the globe 2000-2017  
+2. Housing prices and household income compared across three Canadian provinces (2018)
+3. SQL query of weather data from BigQuery  
+4. 3D data visualization using 'rgl' package in R  
+5. Revenue of largest tech companies, 2021  
+6. Tallest buildings in the world
+7. Zimbabwe labour report Q3, 2021
 
 # Dashboards
 
-Rent prices across province (Shiny app). [Here is the app](https://jeff-zeyl.shinyapps.io/shiny_rent_app/?_ga=2.107511364.7932263.1627397886-968041279.1627397886)
+* This shiny app lets the user select the province and the housing type, producing a chart of price versus year for each included city, highlighted on the map of Canada. Data from Stats Canada.
+ [Here is the app](https://jeff-zeyl.shinyapps.io/shiny_rent_app/?_ga=2.107511364.7932263.1627397886-968041279.1627397886)
 
 <p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/shinyrent.PNG" width="30%", height = "30%" align = "middle"/> </p>
 
