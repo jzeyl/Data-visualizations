@@ -7,7 +7,7 @@
 ## 2. Rent prices across province (Shiny app)
 
 [Here is the app](https://jeff-zeyl.shinyapps.io/shiny_rent_app/?_ga=2.107511364.7932263.1627397886-968041279.1627397886)
-![alt text](https://github.com/jzeyl/Data-visualizations/blob/main/shiny_rent.PNG)
+![alt text](https://github.com/jzeyl/Data-visualizations/blob/main/shinyrent.PNG)
 
 ## 3. Housing prices and household income compared across three Canadian provinces (2018)
 https://www.reddit.com/r/dataisbeautiful/comments/odpjry/household_income_by_residential_property_value_by/  
