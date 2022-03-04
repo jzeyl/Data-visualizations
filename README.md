@@ -1,7 +1,13 @@
-# Data visualizations
+# Data visualisations
+  * [Static visualisations](#static-visualisations)
+  * [Dashboards](#dashboards)
+  * [Animations](#animations)
+  * [Interactive visualisations](#interactive-visualisations)
+
+
+# Static-visualisations
 
 <p float="center" style="background-color:grey";>
-  <img src="https://github.com/jzeyl/Data-visualizations/blob/main/internet.gif" width="30%", height = "15%" align = "middle"/>
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/housing%20prices/housing%20prices%20and%20income%202018.png" width="30%", height = "15%" align = "middle"/>
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/weather%20bigquery/Feb%202%20panel%20weather.png" width="30%", height = "15%" align = "middle"/>
   <img src=https://github.com/jzeyl/Data-visualizations/blob/main/rgl%20cube%20dec%2021.PNG alt="drawing" width="30%", height = "15%"align = "middle"/>
@@ -11,13 +17,12 @@
 
 </p>
 
-1. Internet use across the globe 2000-2017  
-2. Housing prices and household income compared across three Canadian provinces (2018)
-3. SQL query of weather data from BigQuery  
-4. 3D data visualization using 'rgl' package in R  
-5. Revenue of largest tech companies, 2021  
-6. Tallest buildings in the world
-7. Zimbabwe labour report Q3, 2021
+1. Housing prices and household income compared across three Canadian provinces (2018)
+2. SQL query of weather data from BigQuery  
+3. 3D data visualization using 'rgl' package in R  
+4. Revenue of largest tech companies, 2021  
+5. Tallest buildings in the world
+6. Zimbabwe labour report Q3, 2021
 
 # Dashboards
 
@@ -30,8 +35,13 @@
   * <p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/Dashboard%201.png" width="30%", height = "30%" align = "middle"/> </p>
 
 ## Animations
+<p float="center" style="background-color:grey";>
+  <img src="https://github.com/jzeyl/Data-visualizations/blob/main/internet.gif" width="30%", height = "15%" align = "middle"/>
+  <p>
 
-## Interactive graphs
+1. Internet use across the globe 2000-2017  
+    
+# Interactive-visualisations
 
 <!--
 ### 1. Internet use across the globe 2000-2017
