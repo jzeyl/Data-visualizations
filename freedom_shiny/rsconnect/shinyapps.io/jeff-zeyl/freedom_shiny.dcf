@@ -1,0 +1,11 @@
+name: freedom_shiny
+title:
+username:
+account: jeff-zeyl
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5784180
+bundleId: 5644135
+url: https://jeff-zeyl.shinyapps.io/freedom_shiny/
+when: 1646430474.46456
+lastSyncTime: 1646430474.46456
