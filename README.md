@@ -26,6 +26,9 @@
 
 <p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/shinyrent.PNG" width="30%", height = "30%" align = "middle"/> </p>
 
+* Tableau dashboards
+  * https://public.tableau.com/app/profile/jeff.zeyl#!/
+
 <!--
 ### 1. Internet use across the globe 2000-2017
 <!-- ![alt text](https://github.com/jzeyl/Data-visualizations/blob/main/internet.gif)-->
@@ -65,4 +68,4 @@ Scraped from wikipedia using rvest package
 <!--
 ![zim_econ_plot](https://github.com/jzeyl/Data-visualizations/blob/main/zimecon/zimecon.png)
 -->
--->
+
