@@ -1,15 +1,10 @@
 library(shiny)
 library(ggplot2)
-
-library(geojsonio)
-library(rmapshaper)
-library(rgdal)
 library(tidyverse)
-library(spdplyr)
 library(sf)
-library(socviz)
-
 library(patchwork)
+library(ggiraph)
+
 
 canada_cd <- st_read("canada_cd_sim.geojson", quiet = TRUE) # 1
 
@@ -55,7 +50,8 @@ map
 scalevalues<-rep("blue",13)
 
 
-rent<-read.csv("rent canada.csv")
+rent<-read.csv("rent canada.csv",
+               encoding = "UTF-8")
 
 #remove cities that have parts in two provinces
 rentclean<-rent[!grepl("part", rent$province),]
@@ -63,6 +59,19 @@ rentclean<-rentclean[which(rentclean$VALUE>0),]
 rentclean
 names(rentclean)[1]<-"REF_DATE"
 
+conv_accents <- function(x) {
+  x <- gsub(pattern = "è", replacement = "&egrave;", x = x)
+  x <- gsub(pattern = "é", replacement = "&eacute;", x = x)
+  x <- gsub(pattern = "ê", replacement = "&ecirc;", x = x)
+  x <- gsub(pattern = "ô", replacement = "&ocirc;", x = x)
+  x <- gsub(pattern = "'", replacement = "&acute;", x = x)
+  x <- gsub(pattern = "Î", replacement = "&Icirc", x = x)
+  return(x)
+}
+rentclean$cityaccent<-conv_accents(rentclean$city)
+
+#avverage types of units
+rentclean<-rentclean %>% group_by(cityaccent, REF_DATE,Type.of.unit,province) %>% summarise(mn = mean(VALUE))
 
 
 # Define UI for app that draws a histogram ----
@@ -103,16 +112,8 @@ ui <- fluidPage(
                                  "Three bedroom units"),
                   selected = "Percent White"),
       tags$div(
-        #h1("Hello Shiny!"),
-        #hr(),
-        #p(strong("Data from Statcan "), em("italic font")),
-        #p(code("code block")),
         a(href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410013301", 
-          "Data from Statistics Canada"),
-        #HTML('<p>
-        # <label>A numeric input:</label><br /> 
-        # <input type="number" name="n" value="7" min="1" max="30" />
-        # </p>')
+          "Data from Statistics Canada")
       )
     ),
     
@@ -130,12 +131,6 @@ ui <- fluidPage(
 server <- function(input, output) {
   
 
-  
-  # Histogram of the Old Faithful Geyser Data ----
-  # with requested number of bins
-  # This expression that generates a histogram is wrapped in a call
-  # to renderPlot to indicate that:
-  #
   # 1. It is "reactive" and therefore should be automatically
   #    re-executed when inputs (input$bins) change
   # 2. Its output type is a plot
@@ -210,9 +205,7 @@ server <- function(input, output) {
         geom_smooth(method = "loess", col = "red")+
         facet_wrap(facets = vars(province))+
         ggtitle(paste0(input$type))
-      
-      rentplt
-      
+
     }
     
     else{
@@ -220,17 +213,20 @@ server <- function(input, output) {
                             rentclean$province==paste0(" ",input$bins),]
       
       rentplt<-ggplot(data = rentdata, 
-                    aes(x = REF_DATE, y = VALUE))+
+                    aes(x = REF_DATE, y = mn))+
       geom_hline(yintercept = 1000)+
       geom_point(aes())+
+       geom_line_interactive(aes(alpha = 0.1, tooltip = paste0(cityaccent), data_id = cityaccent),
+                            size = 3)+
       ylab("Rent in Dollars")+
       xlab("Year")+
       theme_bw()+
+        theme(legend.position = "none")+
       geom_smooth(method = "loess", col = "red")+
       #facet_wrap(facets = vars(province))+
       ggtitle(paste0(input$type," in ",input$bins))
    
-    rentplt+map
+        rentplt+map
     }
 
       
