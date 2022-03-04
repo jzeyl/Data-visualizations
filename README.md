@@ -27,6 +27,7 @@
 
 * Tableau dashboards
   * https://public.tableau.com/app/profile/jeff.zeyl#!/
+  * * <p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/Dashboard%201.PNG" width="30%", height = "30%" align = "middle"/> </p>
 
 <!--
 ### 1. Internet use across the globe 2000-2017
