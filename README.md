@@ -1,4 +1,4 @@
-# Data-visualizations
+# Data visualizations
 
 <p float="center" style="background-color:grey";>
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/internet.gif" width="30%", height = "15%" align = "middle"/>
