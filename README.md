@@ -18,12 +18,12 @@
 </p>
 <details>
     <summary>Plot descriptions</summary>
-1. Housing prices and household income compared across three Canadian provinces (2018)
-2. SQL query of weather data from BigQuery  
-3. 3D data visualization using 'rgl' package in R  
-4. Revenue of largest tech companies, 2021  
-5. Tallest buildings in the world
-6. Zimbabwe labour report Q3, 2021
+1. Housing prices and household income compared across three Canadian provinces (2018)<br>
+2. SQL query of weather data from BigQuery  <br>
+3. 3D data visualization using 'rgl' package in R  <br>
+4. Revenue of largest tech companies, 2021  <br>
+5. Tallest buildings in the world<br>
+6. Zimbabwe labour report Q3, 2021<br>
 </details>
 
 
