@@ -22,7 +22,7 @@
 2. SQL query of weather data from BigQuery using Python, Seaborn library <br>
 3. 3D data visualization using 'rgl' package in R  <br>
 4. Revenue of largest tech companies, 2021  (R) <br>
-5. Tallest buildings in the world (R) <br>
+5. Tallest buildings in the world (R). Data scraped from Wikipedia <br>
 6. Zimbabwe labour report Q3, 2021 (R) <br>
 </details>
 
