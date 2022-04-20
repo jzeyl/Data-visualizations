@@ -1,6 +1,6 @@
 # Data visualisations
   * [Static visualisations](#static-visualisations)
-  * [Interactive dashboards](#dashboards)
+  * [Interactive dashboards](#Interactive dashboards)
   * [Animations](#animations)
   * [Interactive visualisations](#interactive-visualisations)
 
