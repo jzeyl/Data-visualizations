@@ -1,6 +1,6 @@
 # Data visualisations
   * [Static visualisations](#static-visualisations)
-  * [Dashboards](#dashboards)
+  * [Interactive dashboards](#dashboards)
   * [Animations](#animations)
   * [Interactive visualisations](#interactive-visualisations)
 
@@ -27,7 +27,7 @@
 </details>
 
 
-# Interactive Dashboards
+# Interactive dashboards
 
 * R Shiny Apps. 
    * This app lets the user select the Canadian province and the housing type, producing a chart of price versus year for each included city, highlighted on the map of Canada. Data from Stats Canada.[Here is the app](https://jeff-zeyl.shinyapps.io/shiny_rent_app/?_ga=2.107511364.7932263.1627397886-968041279.1627397886)  
