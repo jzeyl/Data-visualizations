@@ -17,7 +17,8 @@
    <img src="https://github.com/jzeyl/Data-visualizations/blob/main/aq_t_phylogeny.jpeg" width="30%", height = "15%" align = "middle"/> 
    <img src="https://github.com/jzeyl/Data-visualizations/blob/main/aq_t_resids.jpeg" width="30%", height = "15%" align = "middle"/> 
     <img src="https://github.com/jzeyl/Data-visualizations/blob/main/aq_t_pca.jpeg" width="30%", height = "15%" align = "middle"/> 
-
+    <img src="https://github.com/jzeyl/Data-visualizations/blob/main/provincialparksdash.png" width="30%", height = "15%" align = "middle"/> 
+ 
 </p>
 <details>
     <summary>Plot descriptions</summary>
@@ -30,6 +31,7 @@
 7. Figure from scientific paper on <a href="https://www.nature.com/articles/s41598-022-09090-3">bird ear anatomy</a><br>
 8. Figure from scientific paper on <a href="https://www.nature.com/articles/s41598-022-09090-3">bird ear anatomy</a><br>
 9. Figure from scientific paper on <a href="https://www.nature.com/articles/s41598-022-09090-3">bird ear anatomy</a><br>
+10. Ontario Parks visualization scraped from wikipedia (R)
 </details>
 
 
