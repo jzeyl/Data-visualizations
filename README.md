@@ -51,6 +51,7 @@
 ## Animations
 <p float="center" style="background-color:grey";>
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/internet.gif" width="30%", height = "15%" align = "middle"/>
+  <img src="https://github.com/jzeyl/Data-visualizations/blob/main/poppyramid.gif" width="30%", height = "15%" align = "middle"/>
   <p>
 
 1. Internet use across the globe 2000-2017  
