@@ -54,7 +54,8 @@
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/poppyramid.gif" width="30%", height = "15%" align = "middle"/>
   <p>
 
-1. Internet use across the globe 2000-2017  
+1. Internet use across the globe 2000-2017
+2. Data Source: UN data on [Canada population](https://population.un.org/wpp/)
     
 # Interactive-visualisations
 <p float="center" style="background-color:grey";>
