@@ -45,8 +45,6 @@
 
 
 * [Tableau Dashboards](https://public.tableau.com/app/profile/jeff.zeyl#!/)
-  * [Midi visualisation](https://public.tableau.com/app/profile/jeff.zeyl/viz/MidianalysisCTD/Dashboard1)
-  * <p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/Dashboard%201.png" width="30%", height = "30%" align = "middle"/> </p>
 
 ## Animations
 <p float="center" style="background-color:grey";>
