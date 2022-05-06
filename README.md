@@ -13,12 +13,12 @@
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/weather%20bigquery/Feb%202%20panel%20weather.png" width="30%", height = "15%" align = "middle"/>
   <img src=https://github.com/jzeyl/Data-visualizations/blob/main/rgl%20cube%20dec%2021.PNG alt="drawing" width="30%", height = "15%"align = "middle"/>
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/tech%20companies%20revenue/tech%20revenues.png" width="30%", height = "15%" align = "middle"/> 
-  <img src="https://github.com/jzeyl/Data-visualizations/blob/main/tallstatues_apr18.png" width="30%", height = "15%" align = "middle"/> 
+  <img src="https://github.com/jzeyl/Data-visualizations/blob/main/tallest_statues/tallstatues_apr18.png" width="30%", height = "15%" align = "middle"/> 
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/zimecon/zimecon.png" width="30%", height = "15%" align = "middle"/> 
-   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/aq_t_phylogeny.jpeg" width="30%", height = "15%" align = "middle"/> 
-   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/aq_t_resids.jpeg" width="30%", height = "15%" align = "middle"/> 
-    <img src="https://github.com/jzeyl/Data-visualizations/blob/main/aq_t_pca.jpeg" width="30%", height = "15%" align = "middle"/> 
-    <img src="https://github.com/jzeyl/Data-visualizations/blob/main/provincialparksdash.png" width="30%", height = "15%" align = "middle"/> 
+   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/Aqua_terr%20birds/aq_t_phylogeny.jpeg" width="30%", height = "15%" align = "middle"/> 
+   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/Aqua_terr%20birds/aq_t_resids.jpeg" width="30%", height = "15%" align = "middle"/> 
+    <img src="https://github.com/jzeyl/Data-visualizations/blob/main/Aqua_terr%20birds/aq_t_pca.jpeg" width="30%", height = "15%" align = "middle"/> 
+    <img src="https://github.com/jzeyl/Data-visualizations/blob/main/ontarioparkdashboard/provincialparksdash.png" width="30%", height = "15%" align = "middle"/> 
  
 </p>
 <details>
@@ -39,10 +39,10 @@
 # Interactive-dashboards
 
 * R Shiny Apps. 
-   * This app lets the user select the Canadian province and the housing type, producing a chart of price versus year for each included city, highlighted on the map of Canada. Data from Stats Canada.[Here is the app](https://jeff-zeyl.shinyapps.io/shiny_rent_app/?_ga=2.107511364.7932263.1627397886-968041279.1627397886)  
-  * <p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/shinyrent.PNG" width="30%", height = "30%" align = "middle"/> </p>
+   * [This app lets the user select the Canadian province and the housing type](https://jeff-zeyl.shinyapps.io/shiny_rent_app/?_ga=2.107511364.7932263.1627397886-968041279.1627397886), producing a chart of price versus year for each included city, highlighted on the map of Canada. Data from Stats Canada.
+  * <p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/Shiny%20apps/shiny%20rent%20app/shinyrent.PNG" width="30%", height = "30%" align = "middle"/> </p>
   * This app presents civil liberty and political rights across the world, grouped by country and geographic regsion. It has reactive (sortable) tables of for 2020, by country. Data from [here](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-02-22).  [Here is the app](https://jeff-zeyl.shinyapps.io/freedom_shiny/)
-  * <p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/freedom_table.PNG" width="30%", height = "30%" align = "middle"/> </p>
+  * <p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/Shiny%20apps/freedom_shiny/freedom_table.PNG" width="30%", height = "30%" align = "middle"/> </p>
 
 
 * [Tableau Dashboards](https://public.tableau.com/app/profile/jeff.zeyl#!/)
