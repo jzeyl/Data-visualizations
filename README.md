@@ -1,4 +1,5 @@
 # Data visualisations
+  Readme files and codes are in the same folder as each image  
   * [Static visualisations](#static-visualisations)
   * [Interactive dashboards](#interactive-dashboards)
   * [Animations](#animations)
