@@ -48,8 +48,8 @@
 
 ## Animations
 <p float="center" style="background-color:grey";>
-  <img src="https://github.com/jzeyl/Data-visualizations/Animations/Internet usage/internet.gif" width="30%", height = "15%" align = "middle"/>
-  <img src="https://github.com/jzeyl/Data-visualizations/Animations/Population pyramid/poppyramid.gif" width="30%", height = "15%" align = "middle"/>
+  <img src="https://github.com/jzeyl/Data-visualizations/blob/main/Animations/Internet%20usage/internet.gif" width="30%", height = "15%" align = "middle"/>
+  <img src="https://github.com/jzeyl/Data-visualizations/blob/main/Animations/Population%20pyramid/poppyramid.gif" width="30%", height = "15%" align = "middle"/>
   <p>
 Animations\Internet usage\internet.gif
 1. Internet use across the globe 2000-2017
