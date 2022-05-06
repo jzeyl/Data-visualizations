@@ -1,5 +1,5 @@
 # Data visualisations
-  Readme files and codes are in the same folder as each image  
+  Note: Readme files indicataing the data source and codes used are in the same folder as each image (click on each image to go to the folder)  
   * [Static visualisations](#static-visualisations)
   * [Interactive dashboards](#interactive-dashboards)
   * [Animations](#animations)
@@ -41,7 +41,7 @@
 * R Shiny Apps. 
    * [This app lets the user select the Canadian province and the housing type](https://jeff-zeyl.shinyapps.io/shiny_rent_app/?_ga=2.107511364.7932263.1627397886-968041279.1627397886), producing a chart of price versus year for each included city, highlighted on the map of Canada. Data from Stats Canada.
   * <p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/Shiny%20apps/shiny%20rent%20app/shinyrent.PNG" width="30%", height = "30%" align = "middle"/> </p>
-  * This app presents civil liberty and political rights across the world, grouped by country and geographic regsion. It has reactive (sortable) tables of for 2020, by country. Data from [here](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-02-22).  [Here is the app](https://jeff-zeyl.shinyapps.io/freedom_shiny/)
+  * [This app presents civil liberty and political rights across the world, grouped by country and geographic regsion.](https://jeff-zeyl.shinyapps.io/freedom_shiny/) It has reactive (sortable) tables of for 2020, by country. Data from [#tidytuesday data](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-02-22)
   * <p><img src="https://github.com/jzeyl/Data-visualizations/blob/main/Shiny%20apps/freedom_shiny/freedom_table.PNG" width="30%", height = "30%" align = "middle"/> </p>
 
 
@@ -52,13 +52,13 @@
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/Animations/Internet%20usage/internet.gif" width="30%", height = "15%" align = "middle"/>
   <img src="https://github.com/jzeyl/Data-visualizations/blob/main/Animations/Population%20pyramid/poppyramid.gif" width="30%", height = "15%" align = "middle"/>
   <p>
-Animations\Internet usage\internet.gif
+
 1. Internet use across the globe 2000-2017
 2. Data Source: UN data on [Canada population](https://population.un.org/wpp/)
     
 # Interactive-visualisations
 <p float="center" style="background-color:grey";>
-  <img src="https://github.com/jzeyl/Data-visualizations/blob/main/ontarioparkhover_Trim.gif" width="30%", height = "15%" align = "middle"/>
+  <img src="https://github.com/jzeyl/Data-visualizations/blob/main/ontarioparks/ontarioparkhover_Trim.gif" width="30%", height = "15%" align = "middle"/>
   <p>
 <!--
 ### 1. Internet use across the globe 2000-2017
