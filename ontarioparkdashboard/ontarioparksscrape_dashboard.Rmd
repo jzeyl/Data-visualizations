@@ -46,12 +46,12 @@ Change the index of each page and go through each page. This is because there ar
 urlend<-c(SWO,NO,CO,EO,GH)#short name used for assigning
 fullurl<-paste0(baseurl,urlend)#full name for webscraping
 
-index<-5
+index<-1
 ```
 
 Read all tables and headers 
 
-Note for eastern ontario and Golden horseshoe, there is an error becuase these pages had no table of contents. Uncommenting will assign the correct table of contents name
+Note for eastern ontario and Golden horseshoe, there is an error because these pages had no table of contents. Uncommenting will assign the correct table of contents name
 ```{r}
 #read HTML content from url
 content <- read_html(fullurl[index])
@@ -89,8 +89,7 @@ if(length(tables)==length(toc)){
 #may be an extra table needing to remove
 lapply(tables,names)
 
-######select only columns of interest from all dataframes. These are
-######Name, Established, and Coordinates
+######select only columns of interest from all dataframes. These are: Name, Established, and Coordinates
 #using lapply
 ```{r}
 tables_clean<-lapply(tables, function(y) y %>% select(Name,Established,Coordinates))
@@ -112,7 +111,7 @@ tabs_w_region<-purrr::map2(tables_clean, toc, ~ mutate(.x, region = .y, url = fu
 tabs_w_region[[6]]$Established<-
 tabs_w_region[[6]]$Established %>% as.integer()
 
-
+flatten the list of dataframes into one dataframe
 ```{r}
 #flatten the list of dataframes into one dataframe
 flattened<-tabs_w_region %>% bind_rows()
@@ -140,7 +139,10 @@ alldfs<-bind_rows(Northern_Ontario,
 write.csv(alldfs,"C:/Users/jeffz/Desktop/data analysis projects/ont_parks scrape/alldata.csv")
 
 
-Now that we have the lat/long and dates we will add the 
+#alldfs<-read.csv(file.choose())
+
+
+Now that we have the lat/long and dates we will plot them on a geojon shape file for ontario
 ```{r}
 # Add the map -------------------------------------------------------------
 canada_cd <- st_read("C:/Users/jeffz/Desktop/data analysis projects/ontarioparks/canada_cd_sim.geojson", quiet = TRUE) # 1
@@ -168,7 +170,7 @@ ontario<- canada_cd[canada_cd$PRNAME=="Ontario",] %>% st_transform(crs = 4326)
 
 mypoints<-na.omit(mypoints)
 
-mypoints$
+
 
 ```
 
@@ -232,11 +234,6 @@ annotate("text",x = -90, y =45, label = "")
 
 
 ontariomap
-
-#ggplot(data = world) +
-#    geom_sf() +
-#    geom_sf(data = sites, size = 4, shape = 23, fill = "darkred") +
-#    coord_sf(xlim = c(-88, -78), ylim = c(24.5, 33), expand = FALSE)
 
 ```
 
