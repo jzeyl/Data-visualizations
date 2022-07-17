@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is set up across multiple pages:
 
-
+Load libraries
 ```{r cars}
 library(rvest)
 library(tidyverse)
@@ -46,12 +46,12 @@ Change the index of each page and go through each page. This is because there ar
 urlend<-c(SWO,NO,CO,EO,GH)#short name used for assigning
 fullurl<-paste0(baseurl,urlend)#full name for webscraping
 
-index<-1
+index<-5
 ```
 
 Read all tables and headers 
 
-Note for eastern ontario and Golden horseshoe, there is an error because these pages had no table of contents. Uncommenting will assign the correct table of contents name
+Note for eastern ontario and Golden horseshoe, there is an error becuase these pages had no table of contents. Uncommenting will assign the correct table of contents name
 ```{r}
 #read HTML content from url
 content <- read_html(fullurl[index])
@@ -89,7 +89,8 @@ if(length(tables)==length(toc)){
 #may be an extra table needing to remove
 lapply(tables,names)
 
-######select only columns of interest from all dataframes. These are: Name, Established, and Coordinates
+######select only columns of interest from all dataframes. These are
+######Name, Established, and Coordinates
 #using lapply
 ```{r}
 tables_clean<-lapply(tables, function(y) y %>% select(Name,Established,Coordinates))
@@ -111,7 +112,7 @@ tabs_w_region<-purrr::map2(tables_clean, toc, ~ mutate(.x, region = .y, url = fu
 tabs_w_region[[6]]$Established<-
 tabs_w_region[[6]]$Established %>% as.integer()
 
-flatten the list of dataframes into one dataframe
+
 ```{r}
 #flatten the list of dataframes into one dataframe
 flattened<-tabs_w_region %>% bind_rows()
@@ -139,10 +140,7 @@ alldfs<-bind_rows(Northern_Ontario,
 write.csv(alldfs,"C:/Users/jeffz/Desktop/data analysis projects/ont_parks scrape/alldata.csv")
 
 
-#alldfs<-read.csv(file.choose())
-
-
-Now that we have the lat/long and dates we will plot them on a geojon shape file for ontario
+Now that we have the lat/long and dates we will add the 
 ```{r}
 # Add the map -------------------------------------------------------------
 canada_cd <- st_read("C:/Users/jeffz/Desktop/data analysis projects/ontarioparks/canada_cd_sim.geojson", quiet = TRUE) # 1
@@ -235,6 +233,11 @@ annotate("text",x = -90, y =45, label = "")
 
 ontariomap
 
+#ggplot(data = world) +
+#    geom_sf() +
+#    geom_sf(data = sites, size = 4, shape = 23, fill = "darkred") +
+#    coord_sf(xlim = c(-88, -78), ylim = c(24.5, 33), expand = FALSE)
+
 ```
 
 plot counts per region
@@ -249,18 +252,18 @@ regioncounts$regionclean<-factor(regioncounts$regionclean, levels = c("Northern 
 
 countlabel<-"Most provincial parks are found in Northern Ontario. Few are found in the Golden Horseshoe."
 
-count<-ggplot(regioncounts, aes(fill=regionclean, y=n, x=regionclean)) + 
-    geom_bar(stat="identity", width = 0.2, color = "black")+
-    geom_text(aes(y = n+7,label = n), color = "black")+
+count<-ggplot(regioncounts, aes(fill=regionclean, x=n, y=reorder(regionclean,n))) + 
+    geom_bar(stat="identity", width = 0.9, color = "white")+
+    geom_text(aes(x = n+10,label = n), color = "black")+
     #coord_polar(theta = "y",start = , clip = "off")+
     theme_void()+
-  xlab("Region")+
+  ylab("")+
     theme(legend.position = "none",#c(0.8,0.8),
           legend.title = element_blank(),
-    axis.text.x = element_text(color = "black"),
-     axis.title.x = element_text(color = "black", hjust = 0, face = "bold"))+
+    axis.text.y = element_text(color = "black"),
+     axis.title.y = element_text(color = "black", hjust = 0, face = "bold"))+
 labs(subtitle = "")+
-  geom_textbox(aes(x = 3, y = 220, label = countlabel), hjust = 0, vjust = 1,stat = "unique", fill = "white", box.colour = "white")
+  geom_textbox(aes(x = 100, y = 3.5, label = countlabel), hjust = 0, vjust = 1,stat = "unique", fill = "white", box.colour = "white")
 count
 ```
 
@@ -272,17 +275,35 @@ numperyear<-alldfs %>% group_by(Established,regionclean) %>% count()
 streamlabel1<-"Park establishment picked up pace in the 1950s"
 streamlabel2<-"126 parks were established between 1985 and 1989"
 
-streamyear<-ggplot(numperyear, (aes(x = Established, y = n, fill = regionclean)))+
- geom_segment(aes(x = 1985,xend = 1989,y = -30,yend = -30), col = "black")+
-  geom_stream(col = "black")+
-geom_textbox(aes(x = 1950, y = -10, label = streamlabel1), stat = "unique", hjust = 1, width = unit(0.25, "npc"), fill = "white", box.colour = "white")+
-geom_textbox(aes(x = 1980, y = -25, label = streamlabel2), hjust = 1, stat = "unique", fill = "white", box.colour = "white")+
+tiles<-as.data.frame(cbind(seq(1895,2014,20), rep(0,6)))
+library(scales)
+streamyear<-ggplot(numperyear, (aes(x = Established, y = n)))+
+  geom_tile(aes(x = 1885, y = 0, height = Inf, width = 10), fill = alpha("gray", 0.1))+
+  geom_tile(aes(x = 1905, y = 0, height = Inf, width = 10), fill = alpha("grey", 0.1))+
+  geom_tile(aes(x = 1925, y = 0, height = Inf, width = 10), fill = alpha("grey", 0.1))+
+  geom_tile(aes(x = 1945, y = 0, height = Inf, width = 10), fill = alpha("grey", 0.1))+
+  geom_tile(aes(x = 1965, y = 0, height = Inf, width = 10), fill = alpha("grey", 0.1))+
+  geom_tile(aes(x = 1985, y = 0, height = Inf, width = 10), fill = alpha("grey", 0.1))+
+  geom_tile(aes(x = 2005, y = 0, height = Inf, width = 10), fill = alpha("grey", 0.1))+
+  geom_tile(aes(x = 2025, y = 0, height = Inf, width = 10), fill = alpha("grey", 0.1))+
+  geom_stream(aes(fill= regionclean),col = "black")+
+geom_textbox(aes(x = 1950, y = 40, label = streamlabel1), stat = "unique", hjust = 0, width = unit(0.25, "npc"),  fill = "white", box.colour = "black")+
+  geom_segment(aes(x = 1950, xend = 1950,y = 40, yend = 0))+
+geom_textbox(aes(x = 1987, y = -25, label = streamlabel2), hjust = 0, stat = "unique", fill = "white", box.colour = "black")+
+    geom_segment(aes(x = 1987, xend = 1987,y = -25, yend = 0))+
+  geom_point(x = 1950, y = 0)+
+    geom_point(x = 1987, y = 0)+
      theme_void()+
-    xlab("Date of Park Establishment")+
+    #geom_text(aes(x = 1880, y = -Inf-5, label = "Park Establishment Across Time"), vjust = 1)+
   theme(legend.position = "none",
         axis.text.x = element_text(color = "black"),
         axis.line.x = element_line(color = "black"),
-        axis.title.x = element_text(color = "black", hjust = 0, face = "bold"))
+        #axis.title.y = element_text(color = "black", hjust = 0, face = "bold"),
+        strip.placement = "inside")+
+    scale_x_continuous(breaks = seq(1880,2010,10), limits = c(1880, 2014))+
+  ylim(c(-40,45))+
+  geom_text(aes(x = 1880, y = Inf, label = "Park Establishment Timeline"), vjust = 1, hjust = 0, size = 5)
+
 
 streamyear
 ```
@@ -292,10 +313,13 @@ combine all
 ```{r}
 des = "
 1122
-1133
+1122
+3333
+3333
+3333
 "  
 
-ontariomap+count+streamyear+
+count+ontariomap+streamyear+
 plot_layout(guides = "keep", design = des)+
 plot_annotation(title = "Ontario Provincial Parks",
   caption = "Data: Wikipedia. Chart: @jeff_zeyl",
