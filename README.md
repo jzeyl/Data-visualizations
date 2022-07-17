@@ -18,7 +18,7 @@
    <img src="https://raw.githubusercontent.com/jzeyl/Data-visualizations/main/Aqua_terr%20birds/aq_t_phylogeny.jpeg" width="30%", height = "15%" align = "middle"/> 
    <img src="https://raw.githubusercontent.com/jzeyl/Data-visualizations/main/Aqua_terr%20birds/aq_t_resids.jpeg" width="30%", height = "15%" align = "middle"/> 
     <img src="https://raw.githubusercontent.com/jzeyl/Data-visualizations/main/Aqua_terr%20birds/aq_t_pca.jpeg" width="30%", height = "15%" align = "middle"/> 
-    <img src="https://raw.githubusercontent.com/jzeyl/Data-visualizations/main/ontarioparkdashboard/provincialparksdash.png" width="30%", height = "15%" align = "middle"/> 
+    <img src="https://raw.githubusercontent.com/jzeyl/Data-visualizations/main/ontarioparkdashboard/provincialparksdash_.png" width="30%", height = "15%" align = "middle"/> 
  
 </p>
 <details>
