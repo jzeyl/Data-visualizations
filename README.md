@@ -19,7 +19,8 @@
    <img src="https://raw.githubusercontent.com/jzeyl/Data-visualizations/main/Aqua_terr%20birds/aq_t_resids.jpeg" width="30%", height = "15%" align = "middle"/> 
     <img src="https://raw.githubusercontent.com/jzeyl/Data-visualizations/main/Aqua_terr%20birds/aq_t_pca.jpeg" width="30%", height = "15%" align = "middle"/> 
     <img src="https://raw.githubusercontent.com/jzeyl/Data-visualizations/main/ontarioparkdashboard/provincialparksdash_.png" width="30%", height = "15%" align = "middle"/> 
- 
+     <img src="https://raw.githubusercontent.com/jzeyl/Data-visualizations/main/s4.png", width="30%", height = "15%" align = "middle"/> 
+     <img src="https://raw.githubusercontent.com/jzeyl/Data-visualizations/main/audiogramcutoffs.png", width="30%", height = "15%" align = "middle"/> 
 </p>
 <details>
     <summary>Plot descriptions</summary>
